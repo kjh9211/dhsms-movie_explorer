@@ -8,6 +8,8 @@
 .search-box input { width:100%; border:1px solid var(--color-border); background:rgba(0,0,0,.72); color:white; padding:1rem; }
 .search-box button { border:0; background:var(--color-accent); color:white; padding:0 1.5rem; font-weight:700; }
 .content { max-width:var(--content-max-width); margin:auto; padding:2.5rem 5% 5rem; }
+.section-heading { display:flex; justify-content:space-between; align-items:end; margin-bottom:1.5rem; }.section-heading h2,.section-heading p { margin:.25rem 0; }.section-heading p { color:var(--color-text-secondary); }
+.empty-state { padding:5rem 1rem; border:1px solid var(--color-border); text-align:center; color:var(--color-text-secondary); }.empty-state strong { color:white; font-size:1.4rem; }.empty-state button { border:0; background:var(--color-accent); color:white; padding:.8rem 1.2rem; cursor:pointer; }
 .movie-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem 1rem; }
 .movie-card { min-width:0; background:var(--color-surface); transition:transform .2s,filter .2s; }
 .movie-card:hover { transform:scale(1.03); filter:brightness(1.15); }

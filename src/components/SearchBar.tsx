@@ -1,1 +1,2 @@
-export function SearchBar(){return <div className="search-box"><label className="sr-only" htmlFor="movie-search">영화 검색</label><input id="movie-search" type="search" placeholder="영화 제목을 입력하세요"/><button type="button">검색</button></div>}
+interface SearchBarProps { value:string; onChange:(value:string)=>void; onReset:()=>void }
+export function SearchBar({value,onChange,onReset}:SearchBarProps){return <div className="search-box"><label className="sr-only" htmlFor="movie-search">영화 검색</label><input id="movie-search" type="search" placeholder="한글 또는 영문 제목을 입력하세요" value={value} onChange={event=>onChange(event.target.value)}/>{value&&<button type="button" onClick={onReset}>검색 초기화</button>}</div>}
