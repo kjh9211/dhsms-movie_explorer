@@ -1,0 +1,1 @@
+export function SearchBar(){return <div className="search-box"><label className="sr-only" htmlFor="movie-search">영화 검색</label><input id="movie-search" type="search" placeholder="영화 제목을 입력하세요"/><button type="button">검색</button></div>}

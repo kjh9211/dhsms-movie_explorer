@@ -8,9 +8,12 @@
 .search-box input { width:100%; border:1px solid var(--color-border); background:rgba(0,0,0,.72); color:white; padding:1rem; }
 .search-box button { border:0; background:var(--color-accent); color:white; padding:0 1.5rem; font-weight:700; }
 .content { max-width:var(--content-max-width); margin:auto; padding:2.5rem 5% 5rem; }
-.placeholder-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
-.placeholder-card { aspect-ratio:2/3; display:flex; align-items:end; padding:1rem; border:1px solid var(--color-border); background:linear-gradient(145deg,#542229,#181818 70%); transition:transform .2s,filter .2s; }
-.placeholder-card:nth-child(2) { background:linear-gradient(145deg,#173c53,#181818 70%); }.placeholder-card:nth-child(3) { background:linear-gradient(145deg,#53461d,#181818 70%); }.placeholder-card:nth-child(4) { background:linear-gradient(145deg,#254a36,#181818 70%); }
-.placeholder-card:hover { transform:scale(1.03); filter:brightness(1.15); }.placeholder-card h3 { margin:0; }
+.movie-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem 1rem; }
+.movie-card { min-width:0; background:var(--color-surface); transition:transform .2s,filter .2s; }
+.movie-card:hover { transform:scale(1.03); filter:brightness(1.15); }
+.movie-card img { display:block; width:100%; aspect-ratio:2/3; object-fit:cover; }
+.movie-info { padding:1rem; }.movie-info h3,.movie-info p { margin:.25rem 0; }.movie-info>p { color:var(--color-text-secondary); }.movie-meta { display:flex; justify-content:space-between; margin-top:.8rem; }.movie-meta span:last-child { color:#ffd166; }.genres { font-size:.85rem; }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-@media(max-width:700px){.placeholder-grid{grid-template-columns:repeat(2,1fr)}.search-box{flex-direction:column;gap:.5rem}.search-box button{padding:1rem}}
+@media(max-width:900px){.movie-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.movie-grid{grid-template-columns:repeat(2,1fr)}.search-box{flex-direction:column;gap:.5rem}.search-box button{padding:1rem}}
+@media(max-width:420px){.movie-grid{grid-template-columns:1fr}}
