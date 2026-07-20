@@ -1,0 +1,2 @@
+interface QueryStatusProps{isFetching:boolean;updatedAt:number;onRefresh:()=>void}
+export function QueryStatus({isFetching,updatedAt,onRefresh}:QueryStatusProps){return <div className="query-status"><span>{isFetching?'데이터를 가져오는 중':'캐시 사용 가능'} · 마지막 갱신 {updatedAt?new Date(updatedAt).toLocaleTimeString():'-'}</span><button className="secondary-button" type="button" onClick={onRefresh} disabled={isFetching}>{isFetching?'새로고침 중...':'목록 새로고침'}</button></div>}
