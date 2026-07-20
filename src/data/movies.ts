@@ -1,0 +1,80 @@
+import type { Movie } from "../types/movie.js";
+export const movies: Movie[] = [
+  {
+    id: 1,
+    title: "붉은 지평선",
+    originalTitle: "Red Horizon",
+    overview:
+      "화성 탐사대의 마지막 조종사가 사라진 동료와 귀환 방법을 찾아 붉은 황야를 건넌다.",
+    posterUrl: "/posters/red-horizon.svg",
+    releaseDate: "2024-03-15",
+    rating: 8.4,
+    genres: ["SF", "드라마"],
+  },
+  {
+    id: 2,
+    title: "고요한 궤도",
+    originalTitle: "Silent Orbit",
+    overview:
+      "지구와 교신이 끊긴 우주정거장에서 두 연구원이 예상하지 못한 신호를 발견한다.",
+    posterUrl: "/posters/silent-orbit.svg",
+    releaseDate: "2021-11-05",
+    rating: 7.8,
+    genres: ["SF", "미스터리"],
+  },
+  {
+    id: 3,
+    title: "마지막 여름",
+    originalTitle: "The Last Summer",
+    overview:
+      "바닷가 마을의 세 친구가 각자의 길을 떠나기 전 잊지 못할 여름을 보낸다.",
+    posterUrl: "/posters/last-summer.svg",
+    releaseDate: "2019-07-24",
+    rating: 7.5,
+    genres: ["드라마", "로맨스"],
+  },
+  {
+    id: 4,
+    title: "숲의 목소리",
+    originalTitle: "Voices in the Woods",
+    overview:
+      "오래된 숲으로 돌아온 음향 기록가가 어린 시절의 비밀이 담긴 소리를 듣는다.",
+    posterUrl: "/posters/forest-voices.svg",
+    releaseDate: "2022-10-12",
+    rating: 8.1,
+    genres: ["미스터리", "판타지"],
+  },
+  {
+    id: 5,
+    title: "도시의 밤",
+    originalTitle: "City After Dark",
+    overview:
+      "하룻밤 동안 같은 택시에 오른 낯선 사람들의 선택이 하나의 사건으로 이어진다.",
+    posterUrl: "/posters/city-night.svg",
+    releaseDate: "2020-05-29",
+    rating: 7.2,
+    genres: ["범죄", "스릴러"],
+  },
+  {
+    id: 6,
+    title: "파도의 기억",
+    originalTitle: "Memory of Waves",
+    overview:
+      "고향 섬을 찾은 사진작가가 낡은 필름을 통해 가족의 시간을 다시 마주한다.",
+    posterUrl: "/posters/wave-memory.svg",
+    releaseDate: "2023-09-08",
+    rating: 8.7,
+    genres: ["드라마", "가족"],
+  },
+  {
+    id: 7,
+    title: "제로 아워",
+    originalTitle: "Zero Hour",
+    overview:
+      "정전으로 멈춘 미래 도시에서 배달원과 기술자가 해가 뜨기 전 전력을 되살리려 한다.",
+    posterUrl: "/posters/zero-hour.svg",
+    releaseDate: "2025-01-17",
+    rating: 8.0,
+    genres: ["액션", "SF"],
+  },
+];
