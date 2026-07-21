@@ -19,6 +19,8 @@ export function useInfiniteSeroll({
       },
       { rootMargin: "200px" },
     );
+    observer.observe(target);
+    return () => observer.disconnect();
   }, [hasMore, onLoadMore]);
   return loadMoreRef;
 }
