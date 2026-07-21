@@ -271,3 +271,43 @@ input:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+.skeleton {
+  background: linear-gradient(100deg, #292929 30%, #3a3a3a 50%, #292929 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 3px;
+}
+.skeleton-poster {
+  aspect-ratio: 2/3;
+  border-radius: 0;
+}
+.skeleton-title {
+  height: 1.35rem;
+  width: 72%;
+  margin: 0.25rem 0 0.75rem;
+}
+.skeleton-line {
+  height: 1rem;
+  width: 55%;
+}
+.skeleton-meta {
+  height: 1rem;
+  width: 90%;
+  margin-top: 1rem;
+}
+.skeleton-heading {
+  height: 2rem;
+  width: 12rem;
+  margin-bottom: 1.5rem;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-box {
+  box-shadow:
+    -5px -5px 30px 5px red,
+    5px 5px 30px 5px blue;
+}

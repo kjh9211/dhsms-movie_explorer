@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SearchBar } from "../components/SearchBar";
 import { MovieGrid } from "../components/MovieGrid";
 import { movies } from "../data/movies";
-export function HomePage() {
+export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
   const normalizedSearchTerm = searchTerm.trim().toLowerCase();
   const filteredMovies = movies.filter((movie) =>

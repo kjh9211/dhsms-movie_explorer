@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { movies } from "../data/movies";
-import { NotFoundPage } from "./NotFoundPage";
-export function MovieDetailPage() {
+import NotFoundPage from "./NotFoundPage";
+export default function MovieDetailPage() {
   const { movieId } = useParams();
   const movie = movies.find((item) => item.id === Number(movieId));
   const [isFavorite, setIsFavorite] = useState(false);

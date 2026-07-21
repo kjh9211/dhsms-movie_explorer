@@ -1,17 +1,21 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout";
-import { HomePage } from "./pages/HomePage";
-import { MovieDetailPage } from "./pages/MovieDetailPage";
-import { NotFoundPage } from "./pages/NotFoundPage";
+import { lazy, Suspense } from "react";
+import { PageLoadingFallback } from "./components/PageLoadingFallback";
+const MovieDetailPage = lazy(() => import("./pages/MovieDetailPage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
+const HomePage = lazy(() => import("./pages/HomePage"));
 function App() {
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/movies/:movieId" element={<MovieDetailPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<PageLoadingFallback />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies/:movieId" element={<MovieDetailPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </Layout>
   );
 }
