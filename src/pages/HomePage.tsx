@@ -3,6 +3,7 @@ import { SearchBar } from "../components/SearchBar";
 import { MovieGrid } from "../components/MovieGrid";
 import { movies } from "../data/movies";
 import { useInfiniteSeroll } from "../hooks/useInfiniteSeroll";
+import { useQuery } from "@tanstack/react-query";
 
 const PAGE_SIZE = 8;
 const catalog = Array.from({ length: 4000 }, (_, group) =>
@@ -14,6 +15,7 @@ const catalog = Array.from({ length: 4000 }, (_, group) =>
 ).flat();
 
 export default function HomePage() {
+  const moviesQuery = useQuery({ queryKey: ["movies"], })
   const [searchTerm, setSearchTerm] = useState("");
   const [visiableCount, setVisiableCount] = useState(PAGE_SIZE);
   const normalizedSearchTerm = searchTerm.trim().toLowerCase();
